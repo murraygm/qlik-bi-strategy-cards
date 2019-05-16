@@ -1,8 +1,8 @@
-{"cards":[
+var cardArr=[
 	{
-		"number":00,
+		"number":0,
 		"picF":"cardA-covercard-01.jpg",
-		"pibB":"cardA-covercard-02.jpg",
+		"picB":"cardA-covercard-02.jpg",
 		"suit":"",
 		"titleF":"Data,Decisions and Design - 48 nudges to push BI strategies further",
 		"titleB":"How to use this deck"
@@ -10,7 +10,7 @@
 	{
 		"number":1,
 		"picF":"card01-perfectdata-01.jpg",
-		"pibB":"card01-perfectdata-02.jpg",
+		"picB":"card01-perfectdata-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -18,7 +18,7 @@
 	{
 		"number":2,
 		"picF":"card02-asingleversion-01.jpg",
-		"pibB":"card02-asingleversion-02.jpg",
+		"picB":"card02-asingleversion-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -26,7 +26,7 @@
 	{
 		"number":3,
 		"picF":"card03-KPI-01.jpg",
-		"pibB":"card03-KPI-02.jpg",
+		"picB":"card03-KPI-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -34,7 +34,7 @@
 	{
 		"number":4,
 		"picF":"card04-context-01.jpg",
-		"pibB":"card04-context-02.jpg",
+		"picB":"card04-context-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -42,7 +42,7 @@
 	{
 		"number":5,
 		"picF":"card05-reporting-01.jpg",
-		"pibB":"card05-reporting-02.jpg",
+		"picB":"card05-reporting-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -50,7 +50,7 @@
 	{
 		"number":6,
 		"picF":"card06-ethics-01.jpg",
-		"pibB":"card06-ethics-01.jpg",
+		"picB":"card06-ethics-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -58,7 +58,7 @@
 	{
 		"number":7,
 		"picF":"card07-personaldata-01.jpg",
-		"pibB":"card07-personaldata-02.jpg",
+		"picB":"card07-personaldata-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -66,7 +66,7 @@
 	{
 		"number":8,
 		"picF":"card08-data-01.jpg",
-		"pibB":"card08-data-02.jpg",
+		"picB":"card08-data-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -74,7 +74,7 @@
 	{
 		"number":9,
 		"picF":"card09-governance-01.jpg",
-		"pibB":"card09-governance-02.jpg",
+		"picB":"card09-governance-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -82,7 +82,7 @@
 	{
 		"number":10,
 		"picF":"card10-analysts-01.jpg",
-		"pibB":"card10-analysts-02.jpg",
+		"picB":"card10-analysts-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -90,7 +90,7 @@
 	{
 		"number":11,
 		"picF":"card11-facts-01.jpg",
-		"pibB":"card11-facts-02.jpg",
+		"picB":"card11-facts-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -98,7 +98,7 @@
 	{
 		"number":12,
 		"picF":"card12-Heuristics-01.jpg",
-		"pibB":"card12-Heuristics-02.jpg",
+		"picB":"card12-Heuristics-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -106,7 +106,7 @@
 	{
 		"number":13,
 		"picF":"card13-doubt-01.jpg",
-		"pibB":"card13-doubt-02.jpg",
+		"picB":"card13-doubt-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -114,7 +114,7 @@
 	{
 		"number":14,
 		"picF":"card14-storytelling-01.jpg",
-		"pibB":"card14-storytelling-02.jpg",
+		"picB":"card14-storytelling-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -122,7 +122,7 @@
 	{
 		"number":15,
 		"picF":"card15-persuasion-01.jpg",
-		"pibB":"card15-persuasion-02.jpg",
+		"picB":"card15-persuasion-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -130,7 +130,7 @@
 	{
 		"number":16,
 		"picF":"card16-allnarrators-01.jpg",
-		"pibB":"card16-allnarrators-02.jpg",
+		"picB":"card16-allnarrators-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -138,7 +138,7 @@
 	{
 		"number":17,
 		"picF":"card17-datahas-01.jpg",
-		"pibB":"card17-datahas-02.jpg",
+		"picB":"card17-datahas-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -146,7 +146,7 @@
 	{
 		"number":18,
 		"picF":"card18-culture-01.jpg",
-		"pibB":"card18-culture-021.jpg",
+		"picB":"card18-culture-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -154,7 +154,7 @@
 	{
 		"number":19,
 		"picF":"card19-artificialint-01.jpg",
-		"pibB":"card19-artificialint-02.jpg",
+		"picB":"card19-artificialint-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -162,7 +162,7 @@
 	{
 		"number":20,
 		"picF":"card20-dataliteracy-01.jpg",
-		"pibB":"card20-dataliteracy-02.jpg",
+		"picB":"card20-dataliteracy-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -170,7 +170,7 @@
 	{
 		"number":21,
 		"picF":"card21-movingfast-01.jpg",
-		"pibB":"card21-movingfast-02.jpg",
+		"picB":"card21-movingfast-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -178,7 +178,7 @@
 	{
 		"number":22,
 		"picF":"card22-analysis-01.jpg",
-		"pibB":"card22-analysis-02.jpg",
+		"picB":"card22-analysis-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -186,7 +186,7 @@
 	{
 		"number":23,
 		"picF":"card23-heuristics-01.jpg",
-		"pibB":"card23-heuristics-02.jpg",
+		"picB":"card23-heuristics-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -194,7 +194,7 @@
 	{
 		"number":24,
 		"picF":"card24-social-01.jpg",
-		"pibB":"card24-social-02.jpg",
+		"picB":"card24-social-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -202,7 +202,7 @@
 	{
 		"number":25,
 		"picF":"card25-people-01.jpg",
-		"pibB":"card25-people-02.jpg",
+		"picB":"card25-people-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -210,7 +210,7 @@
 	{
 		"number":26,
 		"picF":"card26-notifications-01.jpg",
-		"pibB":"card26-notifications-02.jpg",
+		"picB":"card26-notifications-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -218,7 +218,7 @@
 	{
 		"number":27,
 		"picF":"card27-themapisnot-01.jpg",
-		"pibB":"card27-themapisnot-02.jpg",
+		"picB":"card27-themapisnot-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -226,7 +226,7 @@
 	{
 		"number":28,
 		"picF":"card28-beauty-01.jpg",
-		"pibB":"card28-beauty-02.jpg",
+		"picB":"card28-beauty-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -234,7 +234,7 @@
 	{
 		"number":29,
 		"picF":"card29-infographics-01.jpg",
-		"pibB":"card29-infographics-02.jpg",
+		"picB":"card29-infographics-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -242,7 +242,7 @@
 	{
 		"number":30,
 		"picF":"card30-Visualization-01.jpg",
-		"pibB":"card30-Visualization-02.jpg",
+		"picB":"card30-Visualization-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -250,7 +250,7 @@
 	{
 		"number":31,
 		"picF":"card31-themapis-01.jpg",
-		"pibB":"card31-themapis-02.jpg",
+		"picB":"card31-themapis-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -258,7 +258,7 @@
 	{
 		"number":32,
 		"picF":"card32-visualizationworks-01.jpg",
-		"pibB":"card32-visualizationworks-02.jpg",
+		"picB":"card32-visualizationworks-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -266,7 +266,7 @@
 	{
 		"number":33,
 		"picF":"card33-designthinking-01.jpg",
-		"pibB":"card33-designthinking-02.jpg",
+		"picB":"card33-designthinking-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -274,7 +274,7 @@
 	{
 		"number":34,
 		"picF":"card34-persuasion-01.jpg",
-		"pibB":"card34-persuasion-02.jpg",
+		"picB":"card34-persuasion-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -282,7 +282,7 @@
 	{
 		"number":35,
 		"picF":"card35-readersread-01.jpg",
-		"pibB":"card35-readersread-02.jpg",
+		"picB":"card35-readersread-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -290,7 +290,7 @@
 	{
 		"number":36,
 		"picF":"card36-gamification-01.jpg",
-		"pibB":"card36-gamification-02.jpg",
+		"picB":"card36-gamification-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -298,7 +298,7 @@
 	{
 		"number":37,
 		"picF":"card37-quoteSelfservice-01.jpg",
-		"pibB":"card37-quoteSelfservice-02.jpg",
+		"picB":"card37-quoteSelfservice-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -306,7 +306,7 @@
 	{
 		"number":38,
 		"picF":"card38-quoteCollaboration-01.jpg",
-		"pibB":"card38-quoteCollaboration-02.jpg",
+		"picB":"card38-quoteCollaboration-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -314,7 +314,7 @@
 	{
 		"number":39,
 		"picF":"card39-quoteCertainty-01.jpg",
-		"pibB":"card39-quoteCertainty-02.jpg",
+		"picB":"card39-quoteCertainty-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -322,7 +322,7 @@
 	{
 		"number":40,
 		"picF":"card40-quoteFacts-01.jpg",
-		"pibB":"card40-quoteFacts-02.jpg",
+		"picB":"card40-quoteFacts-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -330,7 +330,7 @@
 	{
 		"number":41,
 		"picF":"card41-quoteContradiction-01.jpg",
-		"pibB":"card41-quoteContradiction-02.jpg",
+		"picB":"card41-quoteContradiction-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -338,7 +338,7 @@
 	{
 		"number":42,
 		"picF":"card42-quoteDiversity-01.jpg",
-		"pibB":"card42-quoteDiversity-02.jpg",
+		"picB":"card42-quoteDiversity-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -346,7 +346,7 @@
 	{
 		"number":43,
 		"picF":"card43-quoteSpeed-01.jpg",
-		"pibB":"card43-quoteSpeed-02.jpg",
+		"picB":"card43-quoteSpeed-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -354,7 +354,7 @@
 	{
 		"number":44,
 		"picF":"card44-quoteModels-01.jpg",
-		"pibB":"card44-quoteModels-02.jpg",
+		"picB":"card44-quoteModels-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -362,7 +362,7 @@
 	{
 		"number":45,
 		"picF":"card45-quoteNovelty-01.jpg",
-		"pibB":"card45-quoteNovelty-02.jpg",
+		"picB":"card45-quoteNovelty-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -370,7 +370,7 @@
 	{
 		"number":46,
 		"picF":"card46-quoteReality-01.jpg",
-		"pibB":"card46-quoteReality-02.jpg",
+		"picB":"card46-quoteReality-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -378,7 +378,7 @@
 	{
 		"number":47,
 		"picF":"card47-quoteUncertainty-01.jpg",
-		"pibB":"card47-quoteUncertainty-02.jpg",
+		"picB":"card47-quoteUncertainty-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -386,7 +386,7 @@
 	{
 		"number":48,
 		"picF":"card48-quoteDebate-01.jpg",
-		"pibB":"card48-quoteDebate-02.jpg",
+		"picB":"card48-quoteDebate-02.jpg",
 		"suit":"",
 		"titleF":"",
 		"titleB":""
@@ -395,10 +395,9 @@
 	{
 		"number":49,
 		"picF":"cardB-aboutcard-01.jpg",
-		"pibB":"cardB-aboutcard-02.jpg",
+		"picB":"cardB-aboutcard-02.jpg",
 		"suit":"",
 		"titleF":"About",
 		"titleB":"&ldquo;Digressions are incontestably the sunshine&rdquo;"
 	}
-]
-}
+];
