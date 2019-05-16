@@ -6,7 +6,7 @@
 <script type="text/javascript" src="JS/cards.json"></script>
 <script type="text/javascript" src="JS/main.js"></script>
 
-
+<meta content="width=device-width, initial-scale=1" name="viewport" />
 <style>
 	@font-face {
   		font-family: qlikview-sans-bold;
@@ -75,13 +75,14 @@
 		border:none;
 		border-radius: 2px;
 		box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+		white-space: nowrap;
 	}
 
 	#threeMore {
 		font-size: calc(14px + 0.4vw);
 		color: #FFF;
 		font-family:qlikview-sans-bold;
-		margin: 10px 40%;
+		margin: 10px 0;
 		padding:4px 8px;
 		background-color: #7eb051;
 		border:none;
@@ -100,6 +101,7 @@
 		top:0px;
 		left:0px;
 		z-index:100;
+		text-align: center;
 	}
 	.card{
 		display:inline-block;
@@ -111,6 +113,20 @@
 		border-radius: 8px;
 		box-shadow: 2px 3px 6px rgba(0, 0, 0, .5);
 		margin: 5vw 3vw 5vw 3vw;
+		cursor: pointer;
+
+	}
+
+	.singlecard{
+		display:inline-block;
+		height: 41vw;
+		width:25vw;
+		background-color: #fff;
+		background-size: cover;
+		background-repeat: no-repeat;
+		border-radius: 8px;
+		box-shadow: 2px 3px 6px rgba(0, 0, 0, .5);
+		margin: 5vw 37.5vw 1vw 37.5vw;
 
 	}
 
@@ -142,20 +158,87 @@
 		box-shadow: none;
 	}
 	
-
-
-	@media only screen and (max-width: 700px) {
-	  #entrypanel{
-		background-image:url(allcards.jpg);
-		background-position: 2vw 2vw;
-		background-repeat: no-repeat;
-		background-size: 90vw;
-		display: block;
-		min-height:50vw;
-		padding:80vw 3vw 3vw 3vw;
-		margin-top:3vw;
-
+	.hinter{
+		color:#fff;
+		font-size:12px;
+		text-align: center;
 	}
+
+	.navbuttons{
+		text-align: center;
+	}
+
+	.currentcardtxt{
+		color:#fff;
+		font-family:qlikview-sans-bold;
+		text-align: center;
+	}
+
+
+	@media only screen and (max-width: 900px) {
+		#entrypanel{
+			background-image:url(allcards.jpg);
+			background-position: 2vw 2vw;
+			background-repeat: no-repeat;
+			background-size: 90vw;
+			display: block;
+			min-height:50vw;
+			padding:80vw 3vw 3vw 3vw;
+			margin-top:3vw;
+
+		}
+		#cards {
+			display:block;
+			height: auto;
+			width:100%;
+			padding-top:5vw;
+			margin:none;
+			background-color: #999;
+			position: absolute;
+			top:0px;
+			left:0px;
+			z-index:100;
+		}
+		#explore {
+			display:block;
+			height: auto;
+			min-height:100%;
+			padding-top:5vw;
+			width:100%;
+			margin:none;
+			background-color: #999;
+			position: absolute;
+			top:0px;
+			left:0px;
+			z-index:200;
+
+		}
+		.card{
+			display:block;
+			height: 132vw;
+			width:80vw;
+			padding-top:5vw;
+			background-color: #fff;
+			background-size: cover;
+			background-repeat: no-repeat;
+			border-radius: 8px;
+			box-shadow: 2px 3px 6px rgba(0, 0, 0, .5);
+			margin: 0vw 3vw 3vw 3vw;
+
+		}
+		.singlecard{
+			display:inline-block;
+			eight: 132vw;
+			width:80vw;
+			padding-top:5vw;
+			background-color: #fff;
+			background-size: cover;
+			background-repeat: no-repeat;
+			border-radius: 8px;
+			box-shadow: 2px 3px 6px rgba(0, 0, 0, .5);
+			margin: 10vw 10vw 3vw 10vw;
+
+		}
 	}
 </style>
 </head>
@@ -185,14 +268,44 @@ and Design<br></h1>
 	<div id="card1" class="card" onclick="flipCard('card1')"></div>
 	<div id="card2" class="card" onclick="flipCard('card2')"></div>
 	<div id="card3" class="card" onclick="flipCard('card3')"></div>
+	<p class="hinter">Tap the card to read the back</p>
+	<div class="navbuttons">
 	<button id="threeMore" onclick="draw3cards('cards')">3 more cards</button>
+	</div>
 </div>
 
 <div id="explore" style="display:none">
 	<button id="close" onclick="closeIt('explore')">X</button>
-	<div id="cardF" class="card" style="margin-right:0px;"></div>
-	<div id="cardB" class="card" style="margin-left:0px;"></div>
-	<button id="prevBut" onclick="changeCard(1)">Previous</button><button id="nextBut" onclick="changeCard(2)">Next</button>
+	<div id="cardF" class="card singlecard" onclick="flipCard('cardF')"></div>
+	
+	<p class="hinter">Tap the card to read the back</p>
+	<div class="navbuttons">
+	<button id="prevBut" onclick="changeCard(1)" >Previous</button><button id="nextBut" onclick="changeCard(2)">Next</button>
+	<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+	</div>
 	
 </div>
 
