@@ -5,28 +5,34 @@ var currentCard = 0;
 	function draw3cards(targ){
 
 		var ran1, ran2, ran3;
-		var workingCardsArr = cardArr.slice(0);
-		ran1 = 1+ Math.floor((Math.random() * workingCardsArr.length));
-console.log(ran1 + " - " + workingCardsArr.length);
+		var workingCardsArr = cardArr.slice(1,49);
+
+
+		ran1 = Math.floor((Math.random() * workingCardsArr.length));
+
 		document.getElementById('card1').style.backgroundImage="url(card-images/"+cardArr[ran1].picF+")";
 
 		workingCardsArr.splice(ran1, 1);  
-		ran2 = 1+ Math.floor((Math.random() * workingCardsArr.length));
-console.log(ran2+ " - " + workingCardsArr.length);
+
+		ran2 = Math.floor((Math.random() * workingCardsArr.length));
+
 		document.getElementById('card2').style.backgroundImage="url(card-images/"+cardArr[ran2].picF+")";
 
 		workingCardsArr.splice(ran2, 1);  
-		ran3 = 1+ Math.floor((Math.random() * workingCardsArr.length));
 
-console.log(ran3+ " - " + workingCardsArr.length);
+		ran3 = Math.floor((Math.random() * workingCardsArr.length));
+
+
 
 		document.getElementById('card3').style.backgroundImage="url(card-images/"+cardArr[ran3].picF+")";
+		workingCardsArr.splice(ran3, 1);  
+
 		document.getElementById(targ).style.display = "block";
 	}
 	function exploreCards(targ){
 
 		document.getElementById('cardF').style.backgroundImage="url(card-images/"+cardArr[currentCard].picF+")";
-		document.getElementById('cardB').style.backgroundImage="url(card-images/"+cardArr[currentCard].picB+")";
+		
 		document.getElementById(targ).style.display = "block";	
 	}
 
@@ -66,6 +72,5 @@ console.log(ran3+ " - " + workingCardsArr.length);
 			}
 		};
 		document.getElementById('cardF').style.backgroundImage="url(card-images/"+cardArr[currentCard].picF+")";
-		document.getElementById('cardB').style.backgroundImage="url(card-images/"+cardArr[currentCard].picB+")";
 
 	}
