@@ -1,76 +1,210 @@
 var currentCard = 0;
-	function closeIt (targ){
-		document.getElementById(targ).style.display = "none";
+function closeIt (targ){
+	document.getElementById(targ).style.display = "none";
+	var outputSearchString = '';
+	if (history.pushState) {
+		var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + outputSearchString;
+		window.history.pushState({path:newurl},'',newurl);
 	}
-	function draw3cards(targ){
-
-		var ran1, ran2, ran3;
-		var workingCardsArr = cardArr.slice(1,49);
+}
 
 
-		ran1 = Math.floor((Math.random() * workingCardsArr.length));
+// URL string var getter
+function getParameterByName(name, url) {
+   if (!url) url = window.location.href;
+   name = name.replace(/[\[\]]/g, "\\$&");
+   var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+	   results = regex.exec(url);
+   if (!results) return null;
+   if (!results[2]) return '';
+   return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
 
-		document.getElementById('card1').style.backgroundImage="url(card-images/"+cardArr[ran1].picF+")";
+function draw3cards(targ){
 
-		workingCardsArr.splice(ran1, 1);  
-
-		ran2 = Math.floor((Math.random() * workingCardsArr.length));
-
-		document.getElementById('card2').style.backgroundImage="url(card-images/"+cardArr[ran2].picF+")";
-
-		workingCardsArr.splice(ran2, 1);  
-
-		ran3 = Math.floor((Math.random() * workingCardsArr.length));
+	var ran1, ran2, ran3;
+	var workingCardsArr = cardArr.slice(1,49);
 
 
+	ran1 = Math.floor((Math.random() * workingCardsArr.length));
 
-		document.getElementById('card3').style.backgroundImage="url(card-images/"+cardArr[ran3].picF+")";
-		workingCardsArr.splice(ran3, 1);  
+	document.getElementById('card1').style.backgroundImage="url(card-images/"+cardArr[ran1].picF+")";
 
-		document.getElementById(targ).style.display = "block";
+	workingCardsArr.splice(ran1, 1);  
+
+	ran2 = Math.floor((Math.random() * workingCardsArr.length));
+
+	document.getElementById('card2').style.backgroundImage="url(card-images/"+cardArr[ran2].picF+")";
+
+	workingCardsArr.splice(ran2, 1);  
+
+	ran3 = Math.floor((Math.random() * workingCardsArr.length));
+
+
+
+	document.getElementById('card3').style.backgroundImage="url(card-images/"+cardArr[ran3].picF+")";
+	workingCardsArr.splice(ran3, 1);  
+
+	document.getElementById(targ).style.display = "block";
+
+	var outputSearchString = '?showcards='+ran1+','+ran2+','+ran3;
+	if (history.pushState) {
+		var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + outputSearchString;
+		window.history.pushState({path:newurl},'',newurl);
 	}
-	function exploreCards(targ){
+}
 
-		document.getElementById('cardF').style.backgroundImage="url(card-images/"+cardArr[currentCard].picF+")";
-		
-		document.getElementById(targ).style.display = "block";	
+function randomSuit(){
+	var ran1s, ran2s, ran3s, ran4s;
+	var dataSuit = cardArr.slice(1,13);
+	var decisionsSuit = cardArr.slice(13,25);
+	var designSuit = cardArr.slice(25,37);
+	var dquotesSuit = cardArr.slice(37,49);
+
+	ran1s = Math.floor((Math.random() * dataSuit.length));
+	ran2s = Math.floor((Math.random() * decisionsSuit.length));
+	ran3s = Math.floor((Math.random() * designSuit.length));
+	ran4s = Math.floor((Math.random() * dquotesSuit.length));
+	document.getElementById('suit1').style.backgroundImage="url(card-images/"+dataSuit[ran1s].picF+")";
+	document.getElementById('suit2').style.backgroundImage="url(card-images/"+decisionsSuit[ran2s].picF+")";
+	document.getElementById('suit3').style.backgroundImage="url(card-images/"+designSuit[ran3s].picF+")";
+	document.getElementById('suit4').style.backgroundImage="url(card-images/"+dquotesSuit[ran4s].picF+")";
+
+	
+
+	document.getElementById('suits').style.display = "block";
+	var outputSearchString = '?showcards='+ran1s+','+ran2s+','+ran3s+','+ran4s;
+	if (history.pushState) {
+		var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + outputSearchString;
+		window.history.pushState({path:newurl},'',newurl);
 	}
 
-	function flipCard(targ){
-		var curPic = document.getElementById(targ).style.backgroundImage;
-		var targEnd= curPic.substr(curPic.length - 8);
+}
 
-		console.log(curPic);
-		console.log(targEnd);
-		var targPic;
-		if(targEnd.match(/01.jpg/g)){
+function drawthesecards(t, c1,c2,c3,c4){
 
-			targPic = curPic.replace("01.jpg", "02.jpg");
-			console.log("matched 01 - "+ targPic);
-			document.getElementById(targ).style.backgroundImage=targPic;
-		} else {
+	if(t=='A'){
+		c1=parseInt(c1, 10);
+		c2=parseInt(c2, 10);
+		c3=parseInt(c3, 10);
 
-			targPic = curPic.replace("02.jpg", "01.jpg");
-			console.log("matched else- "+ targPic);
-			document.getElementById(targ).style.backgroundImage=targPic;
+		document.getElementById('card1').style.backgroundImage="url(card-images/"+cardArr[c1].picF+")";
+		document.getElementById('card2').style.backgroundImage="url(card-images/"+cardArr[c2].picF+")";
+		document.getElementById('card3').style.backgroundImage="url(card-images/"+cardArr[c3].picF+")";
+
+		document.getElementById('cards').style.display = "block";
+	} else if (t=='B'){
+		c1=parseInt(c1, 10);
+		currentCard=c1;
+		document.getElementById('cardF').style.backgroundImage="url(card-images/"+cardArr[c1].picF+")";
+
+		document.getElementById('explore').style.display = "block";	
+	
+
+	} else if (t=='S'){
+		c1=parseInt(c1, 10);
+		c2=parseInt(c2, 10);
+		c3=parseInt(c3, 10);
+		c4=parseInt(c4, 10);
+
+		document.getElementById('suit1').style.backgroundImage="url(card-images/"+cardArr[c1].picF+")";
+		document.getElementById('suit2').style.backgroundImage="url(card-images/"+cardArr[c2].picF+")";
+		document.getElementById('suit3').style.backgroundImage="url(card-images/"+cardArr[c3].picF+")";
+		document.getElementById('suit4').style.backgroundImage="url(card-images/"+cardArr[c4].picF+")";
+
+		document.getElementById('suits').style.display = "block";
+	}
+}
+
+function exploreCards(targ){
+
+	document.getElementById('cardF').style.backgroundImage="url(card-images/"+cardArr[currentCard].picF+")";
+	document.getElementById('singleNavButs').innerHTML='<button id="prevBut" onclick="changeCard(1)" >Previous</button><button id="nextBut" onclick="changeCard(2)">Next</button><br>'
+
+	document.getElementById(targ).style.display = "block";	
+	var outputSearchString = '?showcards='+currentCard;
+	if (history.pushState) {
+		var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + outputSearchString;
+		window.history.pushState({path:newurl},'',newurl);
+	}
+}
+
+function randomCard(){
+	var workingCardsArr = cardArr.slice(1,49);
+	ran0 = Math.floor((Math.random() * workingCardsArr.length));
+	currentCard = ran0;
+	document.getElementById('cardF').style.backgroundImage="url(card-images/"+cardArr[currentCard].picF+")";
+	
+	document.getElementById('singleNavButs').innerHTML='<button id="prevBut" onclick="randomCard()" >Show me another</button>'
+	
+	document.getElementById('explore').style.display = "block";	
+	var outputSearchString = '?showcards='+ran0;
+	if (history.pushState) {
+		var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + outputSearchString;
+		window.history.pushState({path:newurl},'',newurl);
+	}
+}
+
+
+function flipCard(targ){
+	var curPic = document.getElementById(targ).style.backgroundImage;
+	var targEnd= curPic.substr(curPic.length - 8);
+
+
+	var targPic;
+	if(targEnd.match(/01.jpg/g)){
+
+		targPic = curPic.replace("01.jpg", "02.jpg");
+
+		document.getElementById(targ).style.backgroundImage=targPic;
+	} else {
+
+		targPic = curPic.replace("02.jpg", "01.jpg");
+
+		document.getElementById(targ).style.backgroundImage=targPic;
+	}
+
+}
+
+function changeCard(d){
+
+	if(d==1){
+		currentCard = currentCard-1;
+		if(currentCard<0){
+			currentCard = 49;
 		}
 
+	} else {
+		currentCard = currentCard+1;
+		if(currentCard>49){
+			currentCard = 0;
+		}
+	};
+	document.getElementById('cardF').style.backgroundImage="url(card-images/"+cardArr[currentCard].picF+")";
+	var outputSearchString = '?showcards='+currentCard;
+	if (history.pushState) {
+		var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + outputSearchString;
+		window.history.pushState({path:newurl},'',newurl);
 	}
+}
 
-	function changeCard(d){
+// check if targetting a shared view
+// showcards array [numbers]
 
-		if(d==1){
-			currentCard = currentCard-1;
-			if(currentCard<0){
-				currentCard = 49;
-			}
+var targettedview = 0;
+var showcardsArr;
+var showcards = getParameterByName('showcards');
 
-		} else {
-			currentCard = currentCard+1;
-			if(currentCard>49){
-				currentCard = 0;
-			}
-		};
-		document.getElementById('cardF').style.backgroundImage="url(card-images/"+cardArr[currentCard].picF+")";
-
+window.onload = function() {
+	if(showcards){
+		showcardsArr = showcards.split(',');
+//		console.log(showcardsArr);
+		if(showcardsArr.length==3){
+			drawthesecards('A', showcardsArr[0],showcardsArr[1],showcardsArr[2])
+		} else if(showcardsArr.length==4){
+			drawthesecards('S', showcardsArr[0],showcardsArr[1],showcardsArr[2],showcardsArr[3])
+		} else{
+			drawthesecards('B', showcardsArr[0])
+		}
 	}
+}
