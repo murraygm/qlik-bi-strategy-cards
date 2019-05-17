@@ -40,7 +40,7 @@
 		font-style	normal;
 	}
 	h1 {
-		font-size: calc(14px + 1.6vw);
+		font-size: calc(14px + 1.7vw);
 		color: #999;
 		font-family:qlikview-sans-bold;
 		margin-top: 0px;
@@ -69,7 +69,7 @@
 		font-size: calc(14px + 0.4vw);
 		color: #FFF;
 		font-family:qlikview-sans-bold;
-		margin: 10px;
+		margin: 10px 10px 3px 10px;
 		padding:4px 8px;
 		background-color: #7eb051;
 		border:none;
@@ -78,7 +78,7 @@
 		white-space: nowrap;
 	}
 
-	#threeMore {
+	#threeMore, #suitsMore{
 		font-size: calc(14px + 0.4vw);
 		color: #FFF;
 		font-family:qlikview-sans-bold;
@@ -103,6 +103,18 @@
 		z-index:100;
 		text-align: center;
 	}
+	#suits {
+		display:block;
+		height: 100vh;
+		width:100vw;
+		margin:none;
+		background-color: #999;
+		position: absolute;
+		top:0px;
+		left:0px;
+		z-index:100;
+		text-align: center;
+	}
 	.card{
 		display:inline-block;
 		height: 41vw;
@@ -116,6 +128,12 @@
 		cursor: pointer;
 
 	}
+	#suits .card{
+		height: 36vw;
+		width:22vw;
+		margin: 5vw 1vw 5vw 1vw;
+	}
+
 
 	.singlecard{
 		display:inline-block;
@@ -213,9 +231,21 @@
 			z-index:200;
 
 		}
+		#suits {
+			display:block;
+			height: auto;
+			width:100%;
+			padding-top:5vw;
+			margin:none;
+			background-color: #999;
+			position: absolute;
+			top:0px;
+			left:0px;
+			z-index:100;
+		}
 		.card{
 			display:block;
-			height: 132vw;
+			height: 128vw;
 			width:80vw;
 			padding-top:5vw;
 			background-color: #fff;
@@ -226,9 +256,14 @@
 			margin: 0vw 3vw 3vw 3vw;
 
 		}
+		#suits .card{
+			height: 128vw;
+			width:80vw;
+			margin: 0vw 3vw 3vw 3vw;
+		}
 		.singlecard{
 			display:inline-block;
-			eight: 132vw;
+			height: 128vw;
 			width:80vw;
 			padding-top:5vw;
 			background-color: #fff;
@@ -250,16 +285,12 @@ and Design<br></h1>
 <h2>48 nudges to push BI strategies further</h2>
 <p>The deck consists of 48 cards. Each card addresses an idea and offers a hint to help you rethink your organization’s approach to data, decisions and design.</p>
 
-<p>Use them for planning, in meetings or in workshops by either:<br>
-<ul>
-<li>Shuffling the deck and drawing 3 cards</li>
-<li>asking each person to draw a card</li>
-<li>dividing out the suits and drawing 1-3 cards from each suit</li>
-<li>simply picking a card whenever you need to encourage fresh ideas.</li>
-</ul>
+<p>Use them for planning or in workshops:<br>
 </p>
-<button id="shuffle3" onclick="draw3cards('cards')">Draw 3 cards</button>
-<button id="exploreAll" onclick="exploreCards('explore')">Explore the cards</button>
+<button id="shuffle3" onclick="draw3cards('cards')">Draw 3 cards</button><br>
+<button id="shuffle3" onclick="randomCard()">Draw a random card</button><br>
+<button id="shuffle3" onclick="randomSuit()">Draw one card from each suit</button><br>
+<button id="exploreAll" onclick="exploreCards('explore')">Explore all cards</button>
 </div>
  
 <div id="cards" style="display:none">
@@ -274,13 +305,29 @@ and Design<br></h1>
 	</div>
 </div>
 
+<div id="suits" style="display:none">
+	<button id="close" onclick="closeIt('suits')">X</button>
+
+	<div id="suit1" class="card" onclick="flipCard('suit1')"></div>
+	<div id="suit2" class="card" onclick="flipCard('suit2')"></div>
+	<div id="suit3" class="card" onclick="flipCard('suit3')"></div>
+	<div id="suit4" class="card" onclick="flipCard('suit4')"></div>
+	<p class="hinter">Tap the card to read the back</p>
+	<div class="navbuttons">
+	<button id="suitsMore" onclick="randomSuit()">Show me 4 more</button>
+	</div>
+</div>
+
 <div id="explore" style="display:none">
 	<button id="close" onclick="closeIt('explore')">X</button>
 	<div id="cardF" class="card singlecard" onclick="flipCard('cardF')"></div>
 	
 	<p class="hinter">Tap the card to read the back</p>
-	<div class="navbuttons">
+	<div id="singleNavButs" class="navbuttons">
 	<button id="prevBut" onclick="changeCard(1)" >Previous</button><button id="nextBut" onclick="changeCard(2)">Next</button>
+	<br>
+
+	</div>
 	<br>
 <br>
 <br>
@@ -304,9 +351,6 @@ and Design<br></h1>
 <br>
 <br>
 <br>
-<br>
-	</div>
-	
 </div>
 
 
