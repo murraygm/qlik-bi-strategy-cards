@@ -56,19 +56,15 @@ function draw3cards(targ){
 
 function randomSuit(){
 	var ran1s, ran2s, ran3s, ran4s;
-	var dataSuit = cardArr.slice(1,13);
-	var decisionsSuit = cardArr.slice(13,25);
-	var designSuit = cardArr.slice(25,37);
-	var dquotesSuit = cardArr.slice(37,49);
 
-	ran1s = Math.floor((Math.random() * dataSuit.length));
-	ran2s = Math.floor((Math.random() * decisionsSuit.length));
-	ran3s = Math.floor((Math.random() * designSuit.length));
-	ran4s = Math.floor((Math.random() * dquotesSuit.length));
-	document.getElementById('suit1').style.backgroundImage="url(card-images/"+dataSuit[ran1s].picF+")";
-	document.getElementById('suit2').style.backgroundImage="url(card-images/"+decisionsSuit[ran2s].picF+")";
-	document.getElementById('suit3').style.backgroundImage="url(card-images/"+designSuit[ran3s].picF+")";
-	document.getElementById('suit4').style.backgroundImage="url(card-images/"+dquotesSuit[ran4s].picF+")";
+	ran1s = Math.floor(Math.random()*(12-1+1)+1);
+	ran2s = Math.floor(Math.random()*(24-13+1)+13);
+	ran3s = Math.floor(Math.random()*(36-25+1)+25);
+	ran4s = Math.floor(Math.random()*(48-37+1)+37);
+	document.getElementById('suit1').style.backgroundImage="url(card-images/"+cardArr[ran1s].picF+")";
+	document.getElementById('suit2').style.backgroundImage="url(card-images/"+cardArr[ran2s].picF+")";
+	document.getElementById('suit3').style.backgroundImage="url(card-images/"+cardArr[ran3s].picF+")";
+	document.getElementById('suit4').style.backgroundImage="url(card-images/"+cardArr[ran4s].picF+")";
 
 	
 
