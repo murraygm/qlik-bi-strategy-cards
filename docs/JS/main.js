@@ -47,6 +47,8 @@ function draw3cards(targ){
 
 	document.getElementById(targ).style.display = "block";
 
+	window.scrollTo(0, 0);
+
 	var outputSearchString = '?showcards='+ran1+','+ran2+','+ran3;
 	if (history.pushState) {
 		var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + outputSearchString;
@@ -69,6 +71,7 @@ function randomSuit(){
 	
 
 	document.getElementById('suits').style.display = "block";
+	window.scrollTo(0, 0);
 	var outputSearchString = '?showcards='+ran1s+','+ran2s+','+ran3s+','+ran4s;
 	if (history.pushState) {
 		var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + outputSearchString;
@@ -107,7 +110,7 @@ function drawthesecards(t, c1,c2,c3,c4){
 		document.getElementById('suit2').style.backgroundImage="url(card-images/"+cardArr[c2].picF+")";
 		document.getElementById('suit3').style.backgroundImage="url(card-images/"+cardArr[c3].picF+")";
 		document.getElementById('suit4').style.backgroundImage="url(card-images/"+cardArr[c4].picF+")";
-
+		window.scrollTo(0, 0);
 		document.getElementById('suits').style.display = "block";
 	}
 }
@@ -117,7 +120,8 @@ function exploreCards(targ){
 	document.getElementById('cardF').style.backgroundImage="url(card-images/"+cardArr[currentCard].picF+")";
 	document.getElementById('singleNavButs').innerHTML='<button id="prevBut" onclick="changeCard(1)" >Previous</button><button id="nextBut" onclick="changeCard(2)">Next</button><br>'
 
-	document.getElementById(targ).style.display = "block";	
+	document.getElementById(targ).style.display = "block";
+	window.scrollTo(0, 0);	
 	var outputSearchString = '?showcards='+currentCard;
 	if (history.pushState) {
 		var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + outputSearchString;
@@ -134,6 +138,7 @@ function randomCard(){
 	document.getElementById('singleNavButs').innerHTML='<button id="prevBut" onclick="randomCard()" >Show me another</button>'
 	
 	document.getElementById('explore').style.display = "block";	
+	window.scrollTo(0, 0);
 	var outputSearchString = '?showcards='+ran0;
 	if (history.pushState) {
 		var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + outputSearchString;
@@ -177,6 +182,7 @@ function changeCard(d){
 		}
 	};
 	document.getElementById('cardF').style.backgroundImage="url(card-images/"+cardArr[currentCard].picF+")";
+	window.scrollTo(0, 0);
 	var outputSearchString = '?showcards='+currentCard;
 	if (history.pushState) {
 		var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + outputSearchString;
