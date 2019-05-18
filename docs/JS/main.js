@@ -3,6 +3,8 @@ function closeIt (targ){
 	document.getElementById(targ).style.display = "none";
 	var outputSearchString = '';
 	document.getElementById('cardsContainer').innerHTML='<div id="cardF" class="card singlecard" onclick="flipCard(\'cardF\')"></div>';
+	showAlltog=0;
+	currentCard = 0;
 	if (history.pushState) {
 		var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + outputSearchString;
 		window.history.pushState({path:newurl},'',newurl);
@@ -204,7 +206,7 @@ function showAll(){
 		var cardsInsert='';
 		var cardID;
 		cardArr.forEach(function(entry) {
-    		console.log(entry);
+    		//console.log(entry);
     		cardsInsert += '<div id="allcards'+entry.number+'" class="card allcards" style="background-image:url(card-images/'+cardArr[entry.number].picF+');" onclick="flipCard('+'\'allcards'+entry.number+'\')"></div>';
 		});
 
