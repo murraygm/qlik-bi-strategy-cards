@@ -3,7 +3,7 @@ var cardArr=[
 		"number":0,
 		"picF":"cardA-covercard-01.jpg",
 		"picB":"cardA-covercard-02.jpg",
-		"suit":"",
+		"suit":"NONE",
 		"titleF":"Data,Decisions and Design - 48 nudges to push BI strategies further",
 		"titleB":"How to use this deck"
 	},
@@ -11,384 +11,384 @@ var cardArr=[
 		"number":1,
 		"picF":"card01-perfectdata-01.jpg",
 		"picB":"card01-perfectdata-02.jpg",
-		"suit":"",
-		"titleF":"",
-		"titleB":""
+		"suit":"Data",
+		"titleF":"Perfect data...",
+		"titleB":"Perfect data equals unicorn tears"
 	},
 	{
 		"number":2,
 		"picF":"card02-asingleversion-01.jpg",
 		"picB":"card02-asingleversion-02.jpg",
-		"suit":"",
-		"titleF":"",
-		"titleB":""
+		"suit":"Data",
+		"titleF":"A single version...",
+		"titleB":"A single version of the myth"
 	},
 	{
 		"number":3,
 		"picF":"card03-KPI-01.jpg",
 		"picB":"card03-KPI-02.jpg",
-		"suit":"",
-		"titleF":"",
-		"titleB":""
+		"suit":"Data",
+		"titleF":"KPI...",
+		"titleB":"Killing Personal Initiatve"
 	},
 	{
 		"number":4,
 		"picF":"card04-context-01.jpg",
 		"picB":"card04-context-02.jpg",
-		"suit":"",
-		"titleF":"",
-		"titleB":""
+		"suit":"Data",
+		"titleF":"Context...",
+		"titleB":"Context is king"
 	},
 	{
 		"number":5,
 		"picF":"card05-reporting-01.jpg",
 		"picB":"card05-reporting-02.jpg",
-		"suit":"",
-		"titleF":"",
-		"titleB":""
+		"suit":"Data",
+		"titleF":"Reporting...",
+		"titleB":"Reporting is not control"
 	},
 	{
 		"number":6,
 		"picF":"card06-ethics-01.jpg",
 		"picB":"card06-ethics-02.jpg",
-		"suit":"",
-		"titleF":"",
-		"titleB":""
+		"suit":"Data",
+		"titleF":"Ethics...",
+		"titleB":"Ethics is a design problem"
 	},
 	{
 		"number":7,
 		"picF":"card07-personaldata-01.jpg",
 		"picB":"card07-personaldata-02.jpg",
-		"suit":"",
-		"titleF":"",
-		"titleB":""
+		"suit":"Data",
+		"titleF":"Personal data...",
+		"titleB":"Personal data is currency"
 	},
 	{
 		"number":8,
 		"picF":"card08-data-01.jpg",
 		"picB":"card08-data-02.jpg",
-		"suit":"",
-		"titleF":"",
-		"titleB":""
+		"suit":"Data",
+		"titleF":"Data...",
+		"titleB":"Data can be viscous"
 	},
 	{
 		"number":9,
 		"picF":"card09-governance-01.jpg",
 		"picB":"card09-governance-02.jpg",
-		"suit":"",
-		"titleF":"",
-		"titleB":""
+		"suit":"Data",
+		"titleF":"Governance...",
+		"titleB":"Governance is more carrot than stick"
 	},
 	{
 		"number":10,
 		"picF":"card10-analysts-01.jpg",
 		"picB":"card10-analysts-02.jpg",
-		"suit":"",
-		"titleF":"",
-		"titleB":""
+		"suit":"Data",
+		"titleF":"Analysts analyse best...",
+		"titleB":"Analysts analyse best what they analyse least"
 	},
 	{
 		"number":11,
 		"picF":"card11-facts-01.jpg",
 		"picB":"card11-facts-02.jpg",
-		"suit":"",
-		"titleF":"",
-		"titleB":""
+		"suit":"Data",
+		"titleF":"Facts are...",
+		"titleB":"Facts are less permanent than you think"
 	},
 	{
 		"number":12,
 		"picF":"card12-Heuristics-01.jpg",
 		"picB":"card12-Heuristics-02.jpg",
-		"suit":"",
-		"titleF":"",
-		"titleB":""
+		"suit":"Data",
+		"titleF":"Heuristics...",
+		"titleB":"Heuristics can be relied on"
 	},
 	{
 		"number":13,
 		"picF":"card13-doubt-01.jpg",
 		"picB":"card13-doubt-02.jpg",
-		"suit":"",
-		"titleF":"",
-		"titleB":""
+		"suit":"Decisions",
+		"titleF":"Doubt...",
+		"titleB":"Doubt not belief"
 	},
 	{
 		"number":14,
 		"picF":"card14-storytelling-01.jpg",
 		"picB":"card14-storytelling-02.jpg",
-		"suit":"",
-		"titleF":"",
-		"titleB":""
+		"suit":"Decisions",
+		"titleF":"Storytelling...",
+		"titleB":"Storytelling must create debate"
 	},
 	{
 		"number":15,
 		"picF":"card15-persuasion-01.jpg",
 		"picB":"card15-persuasion-02.jpg",
-		"suit":"",
-		"titleF":"",
-		"titleB":""
+		"suit":"Decisions",
+		"titleF":"Persuasion...",
+		"titleB":"Persuasion is a dark art"
 	},
 	{
 		"number":16,
 		"picF":"card16-allnarrators-01.jpg",
 		"picB":"card16-allnarrators-02.jpg",
-		"suit":"",
-		"titleF":"",
-		"titleB":""
+		"suit":"Decisions",
+		"titleF":"All narrators...",
+		"titleB":"All narrators are liars"
 	},
 	{
 		"number":17,
 		"picF":"card17-datahas-01.jpg",
 		"picB":"card17-datahas-02.jpg",
-		"suit":"",
-		"titleF":"",
-		"titleB":""
+		"suit":"Decisions",
+		"titleF":"Data...",
+		"titleB":"Data has no agenda"
 	},
 	{
 		"number":18,
 		"picF":"card18-culture-01.jpg",
 		"picB":"card18-culture-02.jpg",
-		"suit":"",
-		"titleF":"",
-		"titleB":""
+		"suit":"Decisions",
+		"titleF":"Culture...",
+		"titleB":"Culture eats bananas for lunch"
 	},
 	{
 		"number":19,
 		"picF":"card19-artificialint-01.jpg",
 		"picB":"card19-artificialint-02.jpg",
-		"suit":"",
-		"titleF":"",
-		"titleB":""
+		"suit":"Decisions",
+		"titleF":"Artifical intelligence...",
+		"titleB":"Artifical intelligence thinks differently to us"
 	},
 	{
 		"number":20,
 		"picF":"card20-dataliteracy-01.jpg",
 		"picB":"card20-dataliteracy-02.jpg",
-		"suit":"",
-		"titleF":"",
-		"titleB":""
+		"suit":"Decisions",
+		"titleF":"Data literacy...",
+		"titleB":"Data literacy could divide us"
 	},
 	{
 		"number":21,
 		"picF":"card21-movingfast-01.jpg",
 		"picB":"card21-movingfast-02.jpg",
-		"suit":"",
-		"titleF":"",
-		"titleB":""
+		"suit":"Decisions",
+		"titleF":"Moving fast...",
+		"titleB":"Moving fast requires time to think"
 	},
 	{
 		"number":22,
 		"picF":"card22-analysis-01.jpg",
 		"picB":"card22-analysis-02.jpg",
-		"suit":"",
-		"titleF":"",
-		"titleB":""
+		"suit":"Decisions",
+		"titleF":"Analysis...",
+		"titleB":"Analysis will only get you halfway there"
 	},
 	{
 		"number":23,
 		"picF":"card23-heuristics-01.jpg",
 		"picB":"card23-heuristics-02.jpg",
-		"suit":"",
-		"titleF":"",
-		"titleB":""
+		"suit":"Decisions",
+		"titleF":"Heuristics...",
+		"titleB":"Heuristics cannot be relied on"
 	},
 	{
 		"number":24,
 		"picF":"card24-social-01.jpg",
 		"picB":"card24-social-02.jpg",
-		"suit":"",
-		"titleF":"",
-		"titleB":""
+		"suit":"Decisions",
+		"titleF":"Social...",
+		"titleB":"Social is niche"
 	},
 	{
 		"number":25,
 		"picF":"card25-people-01.jpg",
 		"picB":"card25-people-02.jpg",
-		"suit":"",
-		"titleF":"",
-		"titleB":""
+		"suit":"Design",
+		"titleF":"People...",
+		"titleB":"People are born analysts"
 	},
 	{
 		"number":26,
 		"picF":"card26-notifications-01.jpg",
 		"picB":"card26-notifications-02.jpg",
-		"suit":"",
-		"titleF":"",
-		"titleB":""
+		"suit":"Design",
+		"titleF":"Notifications...",
+		"titleB":"Notifications are tyrannical"
 	},
 	{
 		"number":27,
 		"picF":"card27-themapisnot-01.jpg",
 		"picB":"card27-themapisnot-02.jpg",
-		"suit":"",
-		"titleF":"",
-		"titleB":""
+		"suit":"Design",
+		"titleF":"The map...",
+		"titleB":"The map is not the territory"
 	},
 	{
 		"number":28,
 		"picF":"card28-beauty-01.jpg",
 		"picB":"card28-beauty-02.jpg",
-		"suit":"",
-		"titleF":"",
-		"titleB":""
+		"suit":"Design",
+		"titleF":"Beauty...",
+		"titleB":"Beauty is not truth"
 	},
 	{
 		"number":29,
 		"picF":"card29-infographics-01.jpg",
 		"picB":"card29-infographics-02.jpg",
-		"suit":"",
-		"titleF":"",
-		"titleB":""
+		"suit":"Design",
+		"titleF":"Infographics...",
+		"titleB":"Infographics aren't much use"
 	},
 	{
 		"number":30,
 		"picF":"card30-Visualization-01.jpg",
 		"picB":"card30-Visualization-02.jpg",
-		"suit":"",
-		"titleF":"",
-		"titleB":""
+		"suit":"Design",
+		"titleF":"Visualization...",
+		"titleB":"Visualization is myth making"
 	},
 	{
 		"number":31,
 		"picF":"card31-themapis-01.jpg",
 		"picB":"card31-themapis-02.jpg",
-		"suit":"",
-		"titleF":"",
-		"titleB":""
+		"suit":"Design",
+		"titleF":"The map...",
+		"titleB":"The map is the territory"
 	},
 	{
 		"number":32,
 		"picF":"card32-visualizationworks-01.jpg",
 		"picB":"card32-visualizationworks-02.jpg",
-		"suit":"",
-		"titleF":"",
-		"titleB":""
+		"suit":"Design",
+		"titleF":"Visualization works...",
+		"titleB":"Visualization works with one sense alone"
 	},
 	{
 		"number":33,
 		"picF":"card33-designthinking-01.jpg",
 		"picB":"card33-designthinking-02.jpg",
-		"suit":"",
-		"titleF":"",
-		"titleB":""
+		"suit":"Design",
+		"titleF":"Design thinking...",
+		"titleB":"Design thinking requires making something"
 	},
 	{
 		"number":34,
 		"picF":"card34-persuasion-01.jpg",
 		"picB":"card34-persuasion-02.jpg",
-		"suit":"",
-		"titleF":"",
-		"titleB":""
+		"suit":"Design",
+		"titleF":"Persuasion...",
+		"titleB":"Persuasion can be ambient"
 	},
 	{
 		"number":35,
 		"picF":"card35-readersread-01.jpg",
 		"picB":"card35-readersread-02.jpg",
-		"suit":"",
-		"titleF":"",
-		"titleB":""
+		"suit":"Design",
+		"titleF":"Readers read best...",
+		"titleB":"Readers read best what they read most"
 	},
 	{
 		"number":36,
 		"picF":"card36-gamification-01.jpg",
 		"picB":"card36-gamification-02.jpg",
-		"suit":"",
-		"titleF":"",
-		"titleB":""
+		"suit":"Design",
+		"titleF":"Gamification...",
+		"titleB":"Gamification is not likes"
 	},
 	{
 		"number":37,
 		"picF":"card37-quoteSelfservice-01.jpg",
 		"picB":"card37-quoteSelfservice-02.jpg",
-		"suit":"",
-		"titleF":"",
+		"suit":"Quotes",
+		"titleF":"Self service",
 		"titleB":""
 	},
 	{
 		"number":38,
 		"picF":"card38-quoteCollaboration-01.jpg",
 		"picB":"card38-quoteCollaboration-02.jpg",
-		"suit":"",
-		"titleF":"",
+		"suit":"Quotes",
+		"titleF":"Collaboration",
 		"titleB":""
 	},
 	{
 		"number":39,
 		"picF":"card39-quoteCertainty-01.jpg",
 		"picB":"card39-quoteCertainty-02.jpg",
-		"suit":"",
-		"titleF":"",
+		"suit":"Quotes",
+		"titleF":"Certainty",
 		"titleB":""
 	},
 	{
 		"number":40,
 		"picF":"card40-quoteFacts-01.jpg",
 		"picB":"card40-quoteFacts-02.jpg",
-		"suit":"",
-		"titleF":"",
+		"suit":"Quotes",
+		"titleF":"Facts",
 		"titleB":""
 	},
 	{
 		"number":41,
 		"picF":"card41-quoteContradiction-01.jpg",
 		"picB":"card41-quoteContradiction-02.jpg",
-		"suit":"",
-		"titleF":"",
+		"suit":"Quotes",
+		"titleF":"Contradiction",
 		"titleB":""
 	},
 	{
 		"number":42,
 		"picF":"card42-quoteDiversity-01.jpg",
 		"picB":"card42-quoteDiversity-02.jpg",
-		"suit":"",
-		"titleF":"",
+		"suit":"Quotes",
+		"titleF":"Diversity",
 		"titleB":""
 	},
 	{
 		"number":43,
 		"picF":"card43-quoteSpeed-01.jpg",
 		"picB":"card43-quoteSpeed-02.jpg",
-		"suit":"",
-		"titleF":"",
+		"suit":"Quotes",
+		"titleF":"Speed",
 		"titleB":""
 	},
 	{
 		"number":44,
 		"picF":"card44-quoteModels-01.jpg",
 		"picB":"card44-quoteModels-02.jpg",
-		"suit":"",
-		"titleF":"",
+		"suit":"Quotes",
+		"titleF":"Models",
 		"titleB":""
 	},
 	{
 		"number":45,
 		"picF":"card45-quoteNovelty-01.jpg",
 		"picB":"card45-quoteNovelty-02.jpg",
-		"suit":"",
-		"titleF":"",
+		"suit":"Quotes",
+		"titleF":"Novelty",
 		"titleB":""
 	},
 	{
 		"number":46,
 		"picF":"card46-quoteReality-01.jpg",
 		"picB":"card46-quoteReality-02.jpg",
-		"suit":"",
-		"titleF":"",
+		"suit":"Quotes",
+		"titleF":"Change",
 		"titleB":""
 	},
 	{
 		"number":47,
 		"picF":"card47-quoteUncertainty-01.jpg",
 		"picB":"card47-quoteUncertainty-02.jpg",
-		"suit":"",
-		"titleF":"",
+		"suit":"Quotes",
+		"titleF":"Uncertainty",
 		"titleB":""
 	},
 	{
 		"number":48,
 		"picF":"card48-quoteDebate-01.jpg",
 		"picB":"card48-quoteDebate-02.jpg",
-		"suit":"",
-		"titleF":"",
+		"suit":"Quotes",
+		"titleF":"Debate",
 		"titleB":""
 	},
 
@@ -396,7 +396,7 @@ var cardArr=[
 		"number":49,
 		"picF":"cardB-aboutcard-01.jpg",
 		"picB":"cardB-aboutcard-02.jpg",
-		"suit":"",
+		"suit":"None",
 		"titleF":"About",
 		"titleB":"&ldquo;Digressions are incontestably the sunshine&rdquo;"
 	}
