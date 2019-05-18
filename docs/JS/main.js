@@ -2,13 +2,17 @@ var currentCard = 0;
 function closeIt (targ){
 	document.getElementById(targ).style.display = "none";
 	var outputSearchString = '';
+	document.getElementById('cardsContainer').innerHTML='<div id="cardF" class="card singlecard" onclick="flipCard(\'cardF\')"></div>';
 	if (history.pushState) {
 		var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + outputSearchString;
 		window.history.pushState({path:newurl},'',newurl);
 	}
 }
 
-
+function remove(arr, index){
+    arr.splice(index,1);
+    return arr;
+}
 // URL string var getter
 function getParameterByName(name, url) {
    if (!url) url = window.location.href;
@@ -28,28 +32,31 @@ function draw3cards(targ){
 
 	ran1 = Math.floor((Math.random() * workingCardsArr.length));
 
-	document.getElementById('card1').style.backgroundImage="url(card-images/"+cardArr[ran1].picF+")";
+	document.getElementById('card1').style.backgroundImage="url(card-images/"+workingCardsArr[ran1].picF+")";
+	var cardNum1 = workingCardsArr[ran1].number;
 
-	workingCardsArr.splice(ran1, 1);  
+	workingCardsArr = remove(workingCardsArr, ran1);  
 
 	ran2 = Math.floor((Math.random() * workingCardsArr.length));
 
-	document.getElementById('card2').style.backgroundImage="url(card-images/"+cardArr[ran2].picF+")";
+	document.getElementById('card2').style.backgroundImage="url(card-images/"+workingCardsArr[ran2].picF+")";
+	var cardNum2 = workingCardsArr[ran2].number;
 
-	workingCardsArr.splice(ran2, 1);  
+	workingCardsArr = remove(workingCardsArr, ran2);    
 
 	ran3 = Math.floor((Math.random() * workingCardsArr.length));
 
+	document.getElementById('card3').style.backgroundImage="url(card-images/"+workingCardsArr[ran3].picF+")";
+	var cardNum3 = workingCardsArr[ran3].number;
 
-
-	document.getElementById('card3').style.backgroundImage="url(card-images/"+cardArr[ran3].picF+")";
-	workingCardsArr.splice(ran3, 1);  
+	workingCardsArr = remove(workingCardsArr, ran3);   
 
 	document.getElementById(targ).style.display = "block";
 
 	window.scrollTo(0, 0);
 
-	var outputSearchString = '?showcards='+ran1+','+ran2+','+ran3;
+	var outputSearchString = '?showcards='+cardNum1+','+cardNum2+','+cardNum3;
+
 	if (history.pushState) {
 		var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + outputSearchString;
 		window.history.pushState({path:newurl},'',newurl);
@@ -96,6 +103,7 @@ function drawthesecards(t, c1,c2,c3,c4){
 		c1=parseInt(c1, 10);
 		currentCard=c1;
 		document.getElementById('cardF').style.backgroundImage="url(card-images/"+cardArr[c1].picF+")";
+		document.getElementById('singleNavButs').innerHTML='<button id="prevBut" onclick="changeCard(1)" >Previous</button><button id="allBut" onclick="showAll()" >All</button><button id="nextBut" onclick="changeCard(2)">Next</button><br>'
 
 		document.getElementById('explore').style.display = "block";	
 	
@@ -118,7 +126,7 @@ function drawthesecards(t, c1,c2,c3,c4){
 function exploreCards(targ){
 
 	document.getElementById('cardF').style.backgroundImage="url(card-images/"+cardArr[currentCard].picF+")";
-	document.getElementById('singleNavButs').innerHTML='<button id="prevBut" onclick="changeCard(1)" >Previous</button><button id="nextBut" onclick="changeCard(2)">Next</button><br>'
+	document.getElementById('singleNavButs').innerHTML='<button id="prevBut" onclick="changeCard(1)" >Previous</button><button id="allBut" onclick="showAll()" >All</button><button id="nextBut" onclick="changeCard(2)">Next</button><br>'
 
 	document.getElementById(targ).style.display = "block";
 	window.scrollTo(0, 0);	
@@ -188,6 +196,32 @@ function changeCard(d){
 		var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + outputSearchString;
 		window.history.pushState({path:newurl},'',newurl);
 	}
+}
+var showAlltog=0;
+function showAll(){
+	var cardsDiv = document.getElementById('cardsContainer');
+	if(!showAlltog){
+		var cardsInsert='';
+		var cardID;
+		cardArr.forEach(function(entry) {
+    		console.log(entry);
+    		cardsInsert += '<div id="allcards'+entry.number+'" class="card allcards" style="background-image:url(card-images/'+cardArr[entry.number].picF+');" onclick="flipCard('+'\'allcards'+entry.number+'\')"></div>';
+		});
+
+
+
+		cardsDiv.innerHTML=cardsInsert;
+		document.getElementById('singleNavButs').innerHTML='<button id="allBut" onclick="showAll()" >One by One</button><br>'
+		window.scrollTo(0, 0);
+		showAlltog=1;
+	} else {
+		cardsDiv.innerHTML='<div id="cardF" class="card singlecard" style="background-image:url(card-images/'+cardArr[0].picF+');" onclick="flipCard(\'cardF\')"></div>';
+		document.getElementById('singleNavButs').innerHTML='<button id="prevBut" onclick="changeCard(1)" >Previous</button><button id="allBut" onclick="showAll()" >All</button><button id="nextBut" onclick="changeCard(2)">Next</button><br>'
+		window.scrollTo(0, 0);
+		currentCard = 0;
+		showAlltog=0;
+	}
+
 }
 
 // check if targetting a shared view
