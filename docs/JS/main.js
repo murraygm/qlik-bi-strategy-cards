@@ -9,6 +9,12 @@ function closeIt (targ){
 		var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + outputSearchString;
 		window.history.pushState({path:newurl},'',newurl);
 	}
+	document.querySelector('meta[property="og:title"]').setAttribute("content", "Data, Decisions and Design");
+	document.querySelector('meta[property="og:description"]').setAttribute("content", "48 nudges to push BI strategies further");
+	document.querySelector('meta[property="og:url"]').setAttribute("content", "https://murraygm.github.io/qlik-bi-strategy-cards");
+	document.querySelector('meta[name="twitter:url"]').setAttribute("content", "https://murraygm.github.io/qlik-bi-strategy-cards");
+	document.querySelector('meta[property="og:image"]').setAttribute("content", "https://murraygm.github.io/qlik-bi-strategy-cards/allcards.jpg");
+
 }
 
 function remove(arr, index){
@@ -148,6 +154,14 @@ function randomCard(){
 	document.getElementById('singleNavButs').innerHTML='<button id="prevBut" onclick="randomCard()" >Show me another</button>'
 	
 	document.getElementById('explore').style.display = "block";	
+	var desc4Tweet = 
+	
+	document.querySelector('meta[property="og:title"]').setAttribute("content", "Data, Decisions and Design - nudge "+cardArr[currentCard].number);
+	document.querySelector('meta[property="og:description"]').setAttribute("content", cardArr[currentCard].titleB);
+	document.querySelector('meta[property="og:url"]').setAttribute("content", newurl);
+	document.querySelector('meta[name="twitter:url"]').setAttribute("content", newurl);
+	document.querySelector('meta[property="og:image"]').setAttribute("content", "https://murraygm.github.io/qlik-bi-strategy-cards/card-images/"+cardArr[currentCard].picF);
+
 	window.scrollTo(0, 0);
 	var outputSearchString = '?showcards='+ran0;
 	if (history.pushState) {
